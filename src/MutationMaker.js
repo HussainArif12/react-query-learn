@@ -11,7 +11,6 @@ export default function MutationMaker() {
   );
   if (mutation.isSuccess) console.log(mutation.data);
   const sendData = () => {
-    console.log("Clicked");
     mutation.mutate({ name: "Hussain", trips: 420, airline: 5 });
     console.log(mutation);
   };
