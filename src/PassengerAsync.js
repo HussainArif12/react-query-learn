@@ -18,10 +18,6 @@ export default function PassengersAsync() {
     );
     return res.json();
   };
-  const changeID = (event) => {
-    event.preventDefault();
-    setID(event.target.value);
-  };
   const { data, error, isLoading } = useQuery(["passengerID", id], () =>
     fetchPassenger(id)
   );
@@ -30,6 +26,7 @@ export default function PassengersAsync() {
   return (
     <>
       {/*   <input type="text" value={id} onChange={changeID} /> */}
+      <h1>Finder</h1>
       <form onSubmit={formik.handleSubmit}>
         <input id="_id" type="text" onChange={formik.handleChange}></input>
       </form>
