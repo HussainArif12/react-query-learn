@@ -47,7 +47,7 @@ export default function MutationMaker() {
         <button type="submit">Sumbit</button>
       </form>
       {mutation.isLoading && <p>Please wait</p>}
-      {mutation.isSuccess && <p>Success! {mutation.data._id}</p>}
+      {mutation.isSuccess && <p>Success! ID: {mutation.data.data._id}</p>}
     </div>
   );
 }
